@@ -35,7 +35,8 @@ pip install -r requirements.txt
 
 ## Workflo:
 
-1.constants
-2.entity
-3.components
-4.pipeline
+1. constants
+2. entity
+3. components
+4. pipeline
+5. Main File
