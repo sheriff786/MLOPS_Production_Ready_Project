@@ -12,7 +12,10 @@ class TrainingPipelineConfig:
     artifact_dir: str = os.path.join(ARTIFACT_DIR, TIMESTAMP)
     timestamp: str = TIMESTAMP
 
+
 training_pipeline_config: TrainingPipelineConfig = TrainingPipelineConfig()
+
+
 
 @dataclass
 class DataIngestionConfig:
@@ -24,12 +27,17 @@ class DataIngestionConfig:
     collection_name:str = DATA_INGESTION_COLLECTION_NAME
 
 
+
 @dataclass
 class DataValidationConfig:
     data_validation_dir: str = os.path.join(training_pipeline_config.artifact_dir, DATA_VALIDATION_DIR_NAME)
     drift_report_file_path: str = os.path.join(data_validation_dir, DATA_VALIDATION_DRIFT_REPORT_DIR,
                                                DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
     
+
+
+
+
 
 @dataclass
 class DataTransformationConfig:
@@ -45,9 +53,12 @@ class DataTransformationConfig:
 
 
 
-# @dataclass
-# class ModelTrainerConfig:
-#     model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
-#     trained_model_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR, MODEL_FILE_NAME)
-#     expected_accuracy: float = MODEL_TRAINER_EXPECTED_SCORE
-#     model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+@dataclass
+class ModelTrainerConfig:
+    model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
+    trained_model_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR, MODEL_FILE_NAME)
+    expected_accuracy: float = MODEL_TRAINER_EXPECTED_SCORE
+    model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+
+
+    
