@@ -40,3 +40,7 @@ pip install -r requirements.txt
 3. components
 4. pipeline
 5. Main File
+
+##AWS:
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_ACCESS_KEY_ID=""
